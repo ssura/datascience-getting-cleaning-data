@@ -11,19 +11,19 @@
 ##########################################################################################
 
 ## Read the data first
-subject_train <- read.table("UCI HAR Dataset/train/subject_train.txt")
-subject_test <- read.table("UCI HAR Dataset/test/subject_test.txt")
-X_train <- read.table("UCI HAR Dataset/train/X_train.txt")
-X_test <- read.table("UCI HAR Dataset/test/X_test.txt")
-Y_train <- read.table("UCI HAR Dataset/train/y_train.txt")
-Y_test <- read.table("UCI HAR Dataset/test/y_test.txt")
+subject_train <- read.table("subject_train.txt")
+subject_test <- read.table("subject_test.txt")
+X_train <- read.table("X_train.txt")
+X_test <- read.table("X_test.txt")
+Y_train <- read.table("y_train.txt")
+Y_test <- read.table("y_test.txt")
 
 # Provide a column name for subject data.  Subject data is single column data file
 names(subject_train) <- "subject_id"
 names(subject_test) <- "subject_id"
 
 # Provide column names for measurement files
-features <- read.table("UCI HAR Dataset/features.txt")
+features <- read.table("features.txt")
 names(X_train) <- features$V2
 names(X_test) <- features$V2
 
